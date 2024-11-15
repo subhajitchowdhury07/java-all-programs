@@ -1,7 +1,7 @@
 public class mergeSort {
   public static void conqure(int arr[], int si, int mid, int ei){
     int marged[] = new int[ei - si +1];
-    
+    // nlogn
     int idx1= si;
     int idx2 = mid+1;
     int x=0;
@@ -22,7 +22,7 @@ public class mergeSort {
       marged[x++] = arr[idx2++];
     }
 
-    for(int i=0, j=si; i< marged.length; i++, j++){
+    for(int i=0, j=si; i< marged.length; i++, j++){  // all the ele from marged array return store in arr
       arr[j] = marged[i];
     }
 
