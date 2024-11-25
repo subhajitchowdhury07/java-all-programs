@@ -2,6 +2,7 @@ public class mergeSort {
   public static void conqure(int arr[], int si, int mid, int ei){
     int marged[] = new int[ei - si +1];
     // nlogn
+    //time complexity
     int idx1= si;
     int idx2 = mid+1;
     int x=0;
