@@ -1,6 +1,10 @@
 
 
 public class Ll {
+
+    static void removeFirst() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
     Node head;
     class Node{
       String data;
@@ -58,6 +62,38 @@ public class Ll {
       System.out.print("Null");
     }
 
+    // Delete first 
+
+    public void deleteFirst(){
+      if(head == null){
+        System.out.println("empty");
+        return;
+      }
+
+      head = head.next;
+    }
+
+    // delete last
+
+    public void deleteLast(){
+      if(head == null){
+        System.out.println("empty");
+        return;
+      }
+      if(head.next == null){
+        head = null;
+        return;
+      }
+      Node secLast = head;
+      Node last = head.next;
+
+      while(last.next != null){
+        last = last.next;
+        secLast = secLast.next;
+      }
+      secLast.next =null;
+    }
+
     public static void main(String[] args) {
       Ll list = new Ll();
       list.addFirst("a");
@@ -68,6 +104,9 @@ public class Ll {
       list.addLast("list");
 
       list.addFirst("this");
+      
+      list.deleteFirst();
+      list.deleteLast();
       list.printList();
     }
 }
